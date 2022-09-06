@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+$Dividers: rgba(0, 0, 0, .13);
+$Shadow: rgba(0, 0, 0, .15);
+$Input: #b8b8b8;
+$Focus: #03a9f4;
+body {
+    font-family: 'Roboto';
+}
+
+.container {
+    //width: 60em;
+}
+
+img {
+    width: 40px;
+}
+
+.image {
+    padding: 10px;
+}
+
+th,
+td {
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    //width: 5em;
+    //word-wrap: break-word;
+}
+
+th {
+    padding: 10px;
+}
+
+tr {
+    &:last-of-type {
+        border: 0;
+    }
+    border-bottom: 1px solid $Dividers;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    //border-spacing: 0;
+    table-layout: fixed;
+}
+
+.floated-row {
+    //-webkit-box-shadow: 0 0;
+    //box-shadow: 0 2px 5px $Shadow;
+    -webkit-transition: all .2s cubic-bezier(.4, 0, .2, 1);
+    transition-property: transform, box-shadow;
+    //transition: all .2s cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .2s;
+    &:hover {
+        background-color: #f1f1f1;
+        -webkit-box-shadow: 0 2px 4px 0 $Shadow;
+        box-shadow: 0 2px 4px 0 $Shadow;
+        cursor: pointer;
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+.faux-table {
+    margin-top: 2em;
+    ul {
+        //border-bottom: 1px solid $Dividers;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    li {
+        //border: 1px solid #000;
+        box-sizing: border-box;
+        display: inline-block;
+        list-style-type: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 1/6 * 100%;
+        vertical-align: middle;
+    }
+    .image {
+        padding: 10px;
+    }
+    .header {
+        li {
+            font-weight: bold;
+            padding: 5px;
+        }
+    }
+    .form {
+        padding: 10px 50px;
+        input {
+            padding: 20px 0 0;
+        }
+    }
+}
+
+input[type="text"] {
+    border: 2px solid $Input;
+    border-width: 0 0 2px 0;
+    outline: none;
+    width: 100%;
+    &:focus {
+        border: 2px solid $Focus;
+        border-width: 0 0 2px 0;
+        outline: none;
+    }
+}
+
+@media (max-width: 600px) {
+    ul {
+        &.header {
+            display: none;
+        }
+    }
+    .faux-table {
+        li {
+            width: 100%;
+            display: block;
+            padding-bottom: 10px;
+            &[desc] {
+                &::before {
+                    content: attr(desc) ": ";
+                }
+            }
+            &[city] {
+                &::after {
+                    content: " - " attr(city);
+                }
+            }
+            &.city {
+                display: none;
+            }
+        }
+        ul {
+            padding-bottom: 10px;
+        }
+        img {
+            width: 100px;
+        }
+    }
+}

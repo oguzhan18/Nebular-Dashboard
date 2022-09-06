@@ -1,0 +1,31 @@
+// @import "../../../../styles/table.scss"; 
+.responsive-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 245px;
+}
+
+td,
+th {
+    text-align: left;
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #333;
+    color: whitesmoke;
+    border: 1px solid #999;
+}
+
+tr {
+    transition: background-color ease 80ms;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+tr:hover {
+    background-color: rgba(20, 142, 194, 0.15);
+}
