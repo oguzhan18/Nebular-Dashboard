@@ -1,0 +1,61 @@
+{
+  "widgetTypeGroups": [
+    {
+      "key": "general",
+      "value": "General",
+      "widgetTypes": [
+        {
+          "key": "Link",
+          "value": "Link",
+          "defaultModel": {
+            "links": []
+          }
+        },
+        {
+          "key": "Chart",
+          "value": "Chart",
+          "defaultModel": {
+            "chartType": "bar-vertical",
+            "schemeType": "ordinal",
+            "colorScheme": "cool",
+            "animations": true,
+            "showXAxis": true,
+            "showYAxis": true,
+            "showGridLines": true,
+            "rotateXAxisTicks": true,
+            "noBarWhenZero": true,
+            "roundEdges": true,
+            "showXAxisLabel": true,
+            "showYAxisLabel": true,
+            "barPadding": 5,
+            "legendPosition": "right"
+          }
+        },
+        {
+          "key": "Todo",
+          "value": "Todo",
+          "defaultModel": {
+            "items": []
+          }
+        },
+        {
+          "key": "Datetime",
+          "value": "Datetime",
+          "defaultModel": {
+            "format": "dddd Do MMM yyyy HH:mm:ss"
+          }
+        },
+        {
+          "key": "Kpi",
+          "value": "Kpi",
+          "defaultModel": {}
+        },
+        {
+          "key": "DataTable",
+          "value": "DataTable",
+          "defaultModel": {}
+        }
+      ]
+    }
+  ]
+}

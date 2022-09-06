@@ -1,0 +1,23 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <admin-header [headerTitle]='headerTitle' [position]="'normal'"></admin-header>
+  </nb-layout-header>
+
+
+  <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive>
+    <nb-menu [items]="menuItems"></nb-menu>
+  </nb-sidebar>
+
+
+  <nb-layout-column>
+    <nb-card *ngIf="!showOnlyRouter">
+      <nb-card-header>
+        {{title}}
+      </nb-card-header>
+      <nb-card-body>
+        <router-outlet></router-outlet>
+      </nb-card-body>
+    </nb-card>
+    <router-outlet name="dashboard" *ngIf="showOnlyRouter"></router-outlet>
+  </nb-layout-column>
+</nb-layout>

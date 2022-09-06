@@ -1,0 +1,13 @@
+{
+    "metaData": {
+        "translateItems": ["narik"],
+        "events": [{
+            "key": "MODULE_LOAD_COMPLETELY",
+            "info": {
+                "subjectType": "ReplaySubject",
+                "subjectParam": 10
+            }
+        }]
+
+    }
+}
