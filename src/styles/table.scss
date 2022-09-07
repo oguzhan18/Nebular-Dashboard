@@ -1,191 +1,211 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap");
 
-.main {
+body {
+  font-family: "IBM Plex Sans";
+  padding: 16px;
+  background: rgb(224 242 254);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    background: white;
-    width: 100%;
-    max-width: 100%;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    border-radius: 12px;
-    overflow: scroll;
-    height: 40em;
+.main {
+  width: 100%;
+  background: white;
+  max-width: 100%;
+  height: 50em;
+  border-radius: 12px;
+  overflow: scroll;
 }
 
 .table {
-    overflow: scroll;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  border-collapse: collapse;
 
-    width: 100%;
-    border-radius: 8px;
-    font-size: 14px;
-    border-collapse: collapse;
+  tr {
+    border-top: 1px solid #dfe1e6;
+    cursor: pointer;
 
-    tr {
-        border-top: 1px solid #dfe1e6;
-        cursor: pointer;
-
-        &.table-header {
-            cursor: unset;
-            border-top: none;
-        }
-
-        &.table-row:hover {
-            background-color: rgba(0, 0, 0, 0.01);
-        }
+    &.table-header {
+      cursor: unset;
+      border-top: none;
     }
 
-    th:nth-child(2) {
-        text-align: left;
+    &.table-row:hover {
+      background-color: rgba(0, 0, 0, 0.01);
+    }
+  }
+
+  th:nth-child(2) {
+    text-align: left;
+  }
+
+  td {
+    &:nth-child(1) {
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
     }
 
+    &:nth-child(3) {
+      text-align: center;
+    }
+  }
+
+  th,
+  td {
+    padding: 12px;
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      text-align: right;
+    }
+  }
+
+  tr.add-btn {
     td {
-        &:nth-child(1) {
-            text-align: center;
-            color: rgba(0, 0, 0, 0.5);
-        }
-
-        &:nth-child(3) {
-            text-align: center;
-        }
+      padding: 0px;
     }
 
-    th,
-    td {
-        padding: 12px;
+    button.btn {
+      border: none;
+      color: blue;
+      background: transparent;
+      padding: 16px;
+      width: 100%;
 
-        &:nth-child(4),
-        &:nth-child(5) {
-            text-align: right;
-        }
+      &:hover {
+        background: rgba(0, 0, 0, 0.02);
+      }
     }
-
-    tr.add-btn {
-        td {
-            padding: 0px;
-        }
-
-        button.btn {
-            border: none;
-            color: blue;
-            background: transparent;
-            padding: 16px;
-            width: 100%;
-
-            &:hover {
-                background: rgba(0, 0, 0, 0.02);
-            }
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .main {
-        background: transparent;
-        box-shadow: none;
-        border-radius: 0px;
-        max-width: 400px;
-        overflow: scroll;
+  .main {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0px;
+    max-width: 400px;
+  }
 
+  .table {
+    border-collapse: collapse;
+
+    td,
+    th {
+      display: block;
+      padding: 0px;
     }
 
-    .table {
-        overflow: scroll;
-
-        border-collapse: collapse;
-
-        td,
-        th {
-            display: block;
-            padding: 0px;
-        }
-
-        td:nth-child(1) {
-            grid-area: a;
-            margin-right: 4px;
-            margin-left: -4px;
-            font-size: 12px;
-            display: none;
-        }
-
-        td:nth-child(2) {
-            grid-area: b;
-            font-weight: 500;
-            margin-bottom: 2px;
-        }
-
-        td:nth-child(3) {
-            grid-area: d;
-            font-size: 12px;
-            color: rgba(0, 0, 0, 0.5);
-            display: flex;
-
-            &:after {
-                content: "x";
-                margin: 0px 4px;
-            }
-        }
-
-        td:nth-child(4) {
-            grid-area: e;
-            text-align: left;
-            font-size: 12px;
-            color: rgba(0, 0, 0, 0.5);
-        }
-
-        td:nth-child(5) {
-            grid-area: c;
-            color: rgba0(0, 0, 0, 0.5);
-        }
-
-        tr {
-            margin-bottom: 8px;
-            border-top: none;
-            background: white;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-            display: grid;
-            grid-template-areas:
-                "b b c"
-                "d e c";
-            grid-template-columns: auto 1fr auto;
-            align-items: center;
-            padding: 12px;
-
-            &.table-row:hover {
-                background: white;
-            }
-
-            &.add-btn {
-                display: block;
-                padding: 0px;
-            }
-        }
-
-        .table-header {
-            // display: flex;
-            display: none;
-
-            th {
-                font-weight: normal;
-                color: rgba(0, 0, 0, 0.5);
-            }
-
-            th:nth-child(3),
-            th:nth-child(4) {
-                display: none;
-            }
-
-            th:nth-child(1) {
-                width: 24px;
-                margin-right: 4px;
-            }
-
-            th:nth-child(2) {
-                flex: 1;
-            }
-        }
+    td:nth-child(1) {
+      grid-area: a;
+      margin-right: 4px;
+      margin-left: -4px;
+      font-size: 12px;
+      display: none;
     }
 
-    .add-btn td:nth-child(1) {
+    td:nth-child(2) {
+      grid-area: b;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    td:nth-child(3) {
+      grid-area: d;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.5);
+      display: flex;
+
+      &:after {
+        content: "x";
+        margin: 0px 4px;
+      }
+    }
+
+    td:nth-child(4) {
+      grid-area: e;
+      text-align: left;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    td:nth-child(5) {
+      grid-area: c;
+      color: rgba0(0, 0, 0, 0.5);
+    }
+
+    tr {
+      margin-bottom: 8px;
+      border-top: none;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      display: grid;
+      grid-template-areas:
+        "b b c"
+        "d e c";
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      padding: 12px;
+
+      &.table-row:hover {
+        background: white;
+      }
+
+      &.add-btn {
         display: block;
+        padding: 0px;
+      }
     }
+
+    .table-header {
+      // display: flex;
+      display: none;
+
+      th {
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      th:nth-child(3),
+      th:nth-child(4) {
+        display: none;
+      }
+
+      th:nth-child(1) {
+        width: 24px;
+        margin-right: 4px;
+      }
+
+      th:nth-child(2) {
+        flex: 1;
+      }
+    }
+  }
+
+  .add-btn td:nth-child(1) {
+    display: block;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px rgba(128, 128, 128, 0);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
 }

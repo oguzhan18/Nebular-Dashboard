@@ -1,7 +1,19 @@
 import { NarikAppCoreModule } from "@narik/app-core";
 import { NarikClientStorageModule } from "@narik/client-storage";
-import { MEMORY_STORAGE_VALIDITY_LEN, NarikCoreModule, NarikModule, NarikTranslateLoader } from "@narik/core";
-import { ConfigService, MODULE_DATA_KEY, MODULE_UI_KEY, ModuleInfo, ModuleManager, ModuleEventArg } from "@narik/infrastructure";
+import {
+  MEMORY_STORAGE_VALIDITY_LEN,
+  NarikCoreModule,
+  NarikModule,
+  NarikTranslateLoader,
+} from "@narik/core";
+import {
+  ConfigService,
+  MODULE_DATA_KEY,
+  MODULE_UI_KEY,
+  ModuleInfo,
+  ModuleManager,
+  ModuleEventArg,
+} from "@narik/infrastructure";
 import { NarikJwtAuthenticationModule } from "@narik/jwt-authentication";
 import { NarikUiCoreModule } from "@narik/ui-core";
 import { FORM_ITEM_DEFAULT_CLASS } from "@narik/ui-material";
@@ -21,16 +33,26 @@ import { MainComponent } from "./main/main.component";
 
 import { NarikNgxLayout } from "./modules/utils/narik-ngx-layout.module";
 import { MainViewComponent } from "./main-view/main-view.component";
-import { MembersListComponent } from './pages/members/members-list/members-list.component';
-import { MembersAddComponent } from './pages/members/members-add/members-add.component';
-import { ScreenListComponent } from './pages/screen/screen-list/screen-list.component';
-import { ScreenAddComponent } from './pages/screen/screen-add/screen-add.component';
+import { MembersListComponent } from "./pages/members/members-list/members-list.component";
+import { MembersAddComponent } from "./pages/members/members-add/members-add.component";
+import { ScreenListComponent } from "./pages/screen/screen-list/screen-list.component";
+import { ScreenAddComponent } from "./pages/screen/screen-add/screen-add.component";
+import { FormsModule } from "@angular/forms";
 
 const moduleKey = "main";
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, MainViewComponent, MembersListComponent, MembersAddComponent, ScreenListComponent, ScreenAddComponent],
+  declarations: [
+    AppComponent,
+    MainComponent,
+    MainViewComponent,
+    MembersListComponent,
+    MembersAddComponent,
+    ScreenListComponent,
+    ScreenAddComponent,
+  ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -38,8 +60,8 @@ const moduleKey = "main";
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient, ConfigService]
-      }
+        deps: [HttpClient, ConfigService],
+      },
     }),
     NarikCoreModule.forRoot({
       configFilePath: "assets/app-config.json",
@@ -53,7 +75,7 @@ const moduleKey = "main";
       logoutEndPoint: "api/account/Logout",
       refreshEndPoint: "api/account/Authenticate",
       tokenStorage: "localStorage",
-      loginPageUrl: "/"
+      loginPageUrl: "/",
     }),
 
     NbEvaIconsModule,
@@ -72,28 +94,25 @@ const moduleKey = "main";
   providers: [
     {
       provide: MODULE_DATA_KEY,
-      useValue: moduleKey
+      useValue: moduleKey,
     },
     {
       provide: MODULE_UI_KEY,
-      useValue: moduleKey
+      useValue: moduleKey,
     },
     {
       provide: MEMORY_STORAGE_VALIDITY_LEN,
-      useValue: 1
+      useValue: 1,
     },
     {
       provide: FORM_ITEM_DEFAULT_CLASS,
-      useValue: "item-full-width"
-    }
+      useValue: "item-full-width",
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule extends NarikModule {
-  constructor(
-    injector: Injector,
-    moduleManager: ModuleManager,
-  ) {
+  constructor(injector: Injector, moduleManager: ModuleManager) {
     super(injector);
   }
 
