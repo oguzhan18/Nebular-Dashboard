@@ -1,150 +1,191 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400);
-$Dividers: rgba(0, 0, 0, .13);
-$Shadow: rgba(0, 0, 0, .15);
-$Input: #b8b8b8;
-$Focus: #03a9f4;
-body {
-    font-family: 'Roboto';
-}
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap");
 
-.container {
-    //width: 60em;
-}
+.main {
 
-img {
-    width: 40px;
-}
-
-.image {
-    padding: 10px;
-}
-
-th,
-td {
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    //width: 5em;
-    //word-wrap: break-word;
-}
-
-th {
-    padding: 10px;
-}
-
-tr {
-    &:last-of-type {
-        border: 0;
-    }
-    border-bottom: 1px solid $Dividers;
-}
-
-table {
+    background: white;
     width: 100%;
+    max-width: 100%;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 12px;
+    overflow: scroll;
+    height: 40em;
+}
+
+.table {
+    overflow: scroll;
+
+    width: 100%;
+    border-radius: 8px;
+    font-size: 14px;
     border-collapse: collapse;
-    //border-spacing: 0;
-    table-layout: fixed;
-}
 
-.floated-row {
-    //-webkit-box-shadow: 0 0;
-    //box-shadow: 0 2px 5px $Shadow;
-    -webkit-transition: all .2s cubic-bezier(.4, 0, .2, 1);
-    transition-property: transform, box-shadow;
-    //transition: all .2s cubic-bezier(.4, 0, .2, 1);
-    transition-duration: .2s;
-    &:hover {
-        background-color: #f1f1f1;
-        -webkit-box-shadow: 0 2px 4px 0 $Shadow;
-        box-shadow: 0 2px 4px 0 $Shadow;
+    tr {
+        border-top: 1px solid #dfe1e6;
         cursor: pointer;
-        -webkit-transform: translate3d(0, -2px, 0);
-        transform: translate3d(0, -2px, 0);
-    }
-}
 
-.faux-table {
-    margin-top: 2em;
-    ul {
-        //border-bottom: 1px solid $Dividers;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-    li {
-        //border: 1px solid #000;
-        box-sizing: border-box;
-        display: inline-block;
-        list-style-type: none;
-        margin: 0;
-        overflow: hidden;
-        padding: 0;
-        text-align: center;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 1/6 * 100%;
-        vertical-align: middle;
-    }
-    .image {
-        padding: 10px;
-    }
-    .header {
-        li {
-            font-weight: bold;
-            padding: 5px;
+        &.table-header {
+            cursor: unset;
+            border-top: none;
+        }
+
+        &.table-row:hover {
+            background-color: rgba(0, 0, 0, 0.01);
         }
     }
-    .form {
-        padding: 10px 50px;
-        input {
-            padding: 20px 0 0;
+
+    th:nth-child(2) {
+        text-align: left;
+    }
+
+    td {
+        &:nth-child(1) {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        &:nth-child(3) {
+            text-align: center;
+        }
+    }
+
+    th,
+    td {
+        padding: 12px;
+
+        &:nth-child(4),
+        &:nth-child(5) {
+            text-align: right;
+        }
+    }
+
+    tr.add-btn {
+        td {
+            padding: 0px;
+        }
+
+        button.btn {
+            border: none;
+            color: blue;
+            background: transparent;
+            padding: 16px;
+            width: 100%;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.02);
+            }
         }
     }
 }
 
-input[type="text"] {
-    border: 2px solid $Input;
-    border-width: 0 0 2px 0;
-    outline: none;
-    width: 100%;
-    &:focus {
-        border: 2px solid $Focus;
-        border-width: 0 0 2px 0;
-        outline: none;
-    }
-}
+@media screen and (max-width: 768px) {
+    .main {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0px;
+        max-width: 400px;
+        overflow: scroll;
 
-@media (max-width: 600px) {
-    ul {
-        &.header {
+    }
+
+    .table {
+        overflow: scroll;
+
+        border-collapse: collapse;
+
+        td,
+        th {
+            display: block;
+            padding: 0px;
+        }
+
+        td:nth-child(1) {
+            grid-area: a;
+            margin-right: 4px;
+            margin-left: -4px;
+            font-size: 12px;
             display: none;
         }
-    }
-    .faux-table {
-        li {
-            width: 100%;
-            display: block;
-            padding-bottom: 10px;
-            &[desc] {
-                &::before {
-                    content: attr(desc) ": ";
-                }
+
+        td:nth-child(2) {
+            grid-area: b;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        td:nth-child(3) {
+            grid-area: d;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+            display: flex;
+
+            &:after {
+                content: "x";
+                margin: 0px 4px;
             }
-            &[city] {
-                &::after {
-                    content: " - " attr(city);
-                }
+        }
+
+        td:nth-child(4) {
+            grid-area: e;
+            text-align: left;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        td:nth-child(5) {
+            grid-area: c;
+            color: rgba0(0, 0, 0, 0.5);
+        }
+
+        tr {
+            margin-bottom: 8px;
+            border-top: none;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            display: grid;
+            grid-template-areas:
+                "b b c"
+                "d e c";
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            padding: 12px;
+
+            &.table-row:hover {
+                background: white;
             }
-            &.city {
+
+            &.add-btn {
+                display: block;
+                padding: 0px;
+            }
+        }
+
+        .table-header {
+            // display: flex;
+            display: none;
+
+            th {
+                font-weight: normal;
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            th:nth-child(3),
+            th:nth-child(4) {
                 display: none;
             }
+
+            th:nth-child(1) {
+                width: 24px;
+                margin-right: 4px;
+            }
+
+            th:nth-child(2) {
+                flex: 1;
+            }
         }
-        ul {
-            padding-bottom: 10px;
-        }
-        img {
-            width: 100px;
-        }
+    }
+
+    .add-btn td:nth-child(1) {
+        display: block;
     }
 }
