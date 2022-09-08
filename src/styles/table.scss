@@ -29,6 +29,12 @@ body {
     cursor: pointer;
 
     &.table-header {
+      /**** **** **** **** **** **** **** **** **** ****/
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      background-color:#f9f9f9;
+      /**** **** **** **** **** **** **** **** **** ****/
       cursor: unset;
       border-top: none;
     }
@@ -80,6 +86,7 @@ body {
       }
     }
   }
+
 }
 
 @media screen and (max-width: 768px) {

@@ -1,0 +1,13 @@
+{
+    "employees": [
+      {
+        "id": "#",
+        "name": "İsim",
+        "mail": "Mail",
+        "registerDates": "Tarih",
+        "explanation": "Açıklama",
+        "fixedDate":"Değiştirme Tarihi",
+        "process":"İşlem"
+      }
+    ]
+}

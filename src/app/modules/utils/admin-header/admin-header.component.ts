@@ -1,11 +1,6 @@
 import { AuthenticationService } from "@narik/infrastructure";
 import { Component, Input } from "@angular/core";
-import {
-  NbSidebarService,
-  NbMenuItem,
-  NbLayoutDirectionService,
-  NbLayoutDirection
-} from "@nebular/theme";
+import { NbSidebarService, NbMenuItem, NbLayoutDirectionService, NbLayoutDirection } from "@nebular/theme";
 import { TranslateService } from "@ngx-translate/core";
 
 @Component({
@@ -25,7 +20,7 @@ export class NgxHeaderComponent {
       this.nbLayoutDirectionService.setDirection(
         value ? NbLayoutDirection.RTL : NbLayoutDirection.LTR
       );
-      this.translateService.use(value ? "fa" : "en");
+      // this.translateService.use(value ? "fa" : "en");
     }
     this._fa = value;
   }
@@ -41,18 +36,17 @@ export class NgxHeaderComponent {
   constructor(
     private sidebarService: NbSidebarService,
     private nbLayoutDirectionService: NbLayoutDirectionService,
-    private translateService: TranslateService,
+    // private translateService: TranslateService,
     authenticationService: AuthenticationService
   ) {
     for (const menu of this.userMenu) {
-      menu.title = translateService.instant(menu.title);
+      // menu.title = translateService.instant(menu.title);
     }
     this.user = authenticationService.currentUserValue;
   }
 
   toggleSidebar(): boolean {
     this.sidebarService.toggle(true, "menu-sidebar");
-
     return false;
   }
 }

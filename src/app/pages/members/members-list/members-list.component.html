@@ -1,151 +1,224 @@
-<div class="main">
+<!-- <div class="main">
     <table class="table">
         <tr class="table-header">
-            <th>#</th>
-            <th>Barang</th>
-            <th>Qty</th>
-            <th>Harga Satuan</th>
-            <th>Jumlah</th>
+        <tr *ngFor="let employee of employeeData?.employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.mail}}</td>
+            <td>{{employee.registerDates}}</td>
+            <td>{{employee.explanation}}</td>
+            <td>{{employee.fixedDate}}</td>
+            <td>{{employee.process}}</td>
         </tr>
-        <tr class="table-row">
-            <td>1</td>
-            <td>test</td>
-            <td>test </td>
+        <tr *ngFor="let employee of employeeData?.employees">
             <td>test</td>
             <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>2</td>
-            <td>test</td>
-            <td>test </td>
             <td>test</td>
             <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>3</td>
             <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>4</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>5</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>6</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>7</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>8</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>9</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>10</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>11</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>12</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>13</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>14</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>15</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>16</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>17</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>18</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>19</td>
-            <td>test</td>
-            <td>test </td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <tr class="table-row">
-            <td>20</td>
-            <td>test</td>
-            <td>test </td>
             <td>test</td>
             <td>test</td>
         </tr>
     </table>
-</div>
+</div> -->
+<table id="html5-extension" class="table table-hover non-hover dataTable no-footer" style="width: 100%;" role="grid"
+    aria-describedby="html5-extension_info">
+    <thead>
+        <tr role="row">
+            <th class="sorting_asc" tabindex="0" aria-controls="html5-extension" rowspan="1" colspan="1"
+                aria-sort="ascending" aria-label="#: activate to sort column descending" style="width: 11px;">#</th>
+            <th class="sorting" tabindex="0" aria-controls="html5-extension" rowspan="1" colspan="1"
+                aria-label="Başlık: activate to sort column ascending" style="width: 54px;">Başlık</th>
+            <th class="sorting" tabindex="0" aria-controls="html5-extension" rowspan="1" colspan="1"
+                aria-label="Url: activate to sort column ascending" style="width: 35px;">Url</th>
+            <th class="sorting" tabindex="0" aria-controls="html5-extension" rowspan="1" colspan="1"
+                aria-label="İşlem: activate to sort column ascending" style="width: 78px;">İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+
+
+
+
+
+
+
+        <tr role="row">
+            <td class="sorting_1">2</td>
+            <td>FX TRADER</td>
+            <td>fxtrader</td>
+            <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dark btn-sm">İşlem</button>
+                    <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                        id="dropdownMenuReference6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        data-reference="parent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-down">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference6" style="will-change: transform;">
+                        <a class="dropdown-item" href="/admin/sayfa/duzenle/2">Düzenle</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/admin/sayfa/sil/2" name="2" id="uyeSil">Sil</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr role="row">
+            <td class="sorting_1">3</td>
+            <td>ERPGOLDV2</td>
+            <td>erpgoldv2</td>
+            <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dark btn-sm">İşlem</button>
+                    <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                        id="dropdownMenuReference6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        data-reference="parent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-down">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference6">
+                        <a class="dropdown-item" href="/admin/sayfa/duzenle/3">Düzenle</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/admin/sayfa/sil/3" name="3" id="uyeSil">Sil</a>
+                    </div>
+                </div>
+            </td> 
+        </tr>
+        <tr role="row">
+            <td class="sorting_1">4</td>
+            <td>EDS</td>
+            <td>eds</td>
+            <!-- <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dark btn-sm">İşlem</button>
+                    <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                        id="dropdownMenuReference6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        data-reference="parent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-down">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference6">
+                        <a class="dropdown-item" href="/admin/sayfa/duzenle/4">Düzenle</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/admin/sayfa/sil/4" name="4" id="uyeSil">Sil</a>
+                    </div>
+                </div>
+            </td> -->
+            <nb-actions size="small">
+                <nb-action>
+                  <nb-user nbContextMenuTag="user-context-menu" [nbContextMenu]="userMenu" [name]="user?.title"
+                    [picture]="'assets/images/utils-images/side-users.jpeg'"></nb-user>
+                </nb-action>
+              </nb-actions>
+        </tr>
+        <tr role="row">
+            <td class="sorting_1">5</td>
+            <td>HAKKIMIZDA</td>
+            <td>hakkimizda</td>
+            <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dark btn-sm">İşlem</button>
+                    <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                        id="dropdownMenuReference6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        data-reference="parent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-down">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference6">
+                        <a class="dropdown-item" href="/admin/sayfa/duzenle/5">Düzenle</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/admin/sayfa/sil/5" name="5" id="uyeSil">Sil</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr role="row">
+            <td class="sorting_1">6</td>
+            <td>DİĞER ÇÖZÜMLER</td>
+            <td>digercozumler</td>
+            <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dark btn-sm">İşlem</button>
+                    <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                        id="dropdownMenuReference6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        data-reference="parent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-down">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference6">
+                        <a class="dropdown-item" href="/admin/sayfa/duzenle/6">Düzenle</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/admin/sayfa/sil/6" name="6" id="uyeSil">Sil</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr role="row">
+            <td class="sorting_1">7</td>
+            <td>HİZMETLER</td>
+            <td>hizmetler</td>
+            <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dark btn-sm">İşlem</button>
+                    <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                        id="dropdownMenuReference6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        data-reference="parent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-down">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference6">
+                        <a class="dropdown-item" href="/admin/sayfa/duzenle/7">Düzenle</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/admin/sayfa/sil/7" name="7" id="uyeSil">Sil</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr role="row">
+            <td class="sorting_1">8</td>
+            <td>GİZLİLİK POLİTİKASI</td>
+            <td>privacy-policy</td>
+            <td>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dark btn-sm">İşlem</button>
+                    <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                        id="dropdownMenuReference6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        data-reference="parent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-down">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference6">
+                        <a class="dropdown-item" href="/admin/sayfa/duzenle/8">Düzenle</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/admin/sayfa/sil/8" name="8" id="uyeSil">Sil</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

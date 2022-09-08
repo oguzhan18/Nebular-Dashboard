@@ -42,15 +42,7 @@ import { FormsModule } from "@angular/forms";
 const moduleKey = "main";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainComponent,
-    MainViewComponent,
-    MembersListComponent,
-    MembersAddComponent,
-    ScreenListComponent,
-    ScreenAddComponent,
-  ],
+  declarations: [AppComponent, MainComponent, MainViewComponent],
   imports: [
     FormsModule,
     BrowserModule,
