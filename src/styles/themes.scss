@@ -1,8 +1,7 @@
 @import '~@nebular/theme/styles/theming';
 @import '~@nebular/theme/styles/themes';
 
-$nb-themes: nb-register-theme((
-  // app wise variables for each theme
+$nb-themes: nb-register-theme(( 
   sidebar-header-gap: 2rem,
   sidebar-header-height: initial,
   layout-content-width: 1400px,
