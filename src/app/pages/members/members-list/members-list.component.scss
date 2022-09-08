@@ -1,1 +1,67 @@
 // @import "../../../../styles/table.scss"; 
+ 
+:host {
+    padding: 0 !important;
+    height: 100%;
+  }
+  
+  .gu-mirror {
+    background-color: white;
+    border-radius: 0.125rem;
+    padding: 0.5rem;
+    opacity: 1;
+  }
+  
+  /* ASSESSMENT TABLE */
+  .mat-table {
+    overflow: auto;
+    min-height: 200px;
+    max-height: 500px;
+  }
+  
+  .full-width-table {
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  button {
+    align-self: flex-end;
+    width: 100px;
+  }
+  
+  .mat-header-cell {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Column Widths */
+  .mat-column-section_modified_on,
+  .mat-column-chapter_modified_on,
+  .mat-column-modifiedOn,
+  .mat-column-chapter_id,
+  .mat-column-section_id {
+    width: 15%;
+    min-width: 15%;
+    text-align: center;
+  }
+  
+  .mat-column-name,
+  .mat-column-section,
+  .mat-column-chapter {
+    width: 30%;
+    min-width: 30%;
+  }
+  
+  .mat-column-progress {
+    width: 40%;
+    min-width: 40%;
+  }
+  
+  .inactive {
+    text-decoration: line-through;
+  }
+   .mat-column-chapter_modified_on
+  .taskboard-header {
+    text-align: center;
+  }
+  

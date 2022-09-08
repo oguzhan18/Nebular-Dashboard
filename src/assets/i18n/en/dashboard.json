@@ -2,8 +2,8 @@
     "dashboard": {
         "dashboard": "Panel",
         "dashboardForm": "Üyeler",
-        "dashboardMembers": "Üye Listesi",
-        "dashboardDesign": "Üye Oluştur",
+        "dashboardMembers": "Üye Oluştur",
+        "dashboardDesign": "Üye Listesi",
         "row-size-is-full": "Can not add cell to this row!",
         "confirm-remove-row": "Are you sure to remove the row?",
         "confirm-remove-cell": "Are you sure to remove the cell?",

@@ -16,7 +16,8 @@ import {
   NbSidebarModule,
   NbSidebarService,
   NbUserModule,
-  NbIconModule
+  NbIconModule,
+  NbToggleModule
 } from "@nebular/theme";
 import { RouterModule } from "@angular/router";
 
@@ -34,7 +35,8 @@ import { RouterModule } from "@angular/router";
     NbSidebarModule,
     NbIconModule,
     NbUserModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    NbToggleModule
   ],
   declarations: [COMPONENTS],
   exports: [COMPONENTS],

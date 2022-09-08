@@ -1,8 +1,8 @@
 import { HttpClient } from "@angular/common/http";
-import { Component, OnInit } from "@angular/core"; 
-import { HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { Component, OnInit } from "@angular/core";
+import { HttpErrorResponse } from "@angular/common/http";
+import { Observable, throwError } from "rxjs";
+import { catchError, retry } from "rxjs/operators";
 import { NbMenuItem } from "@nebular/theme";
 
 @Component({
@@ -12,16 +12,19 @@ import { NbMenuItem } from "@nebular/theme";
 })
 export class MembersListComponent implements OnInit {
   employeeData: any;
-user:any;
+  user: any;
   constructor(private httpClient: HttpClient) {}
-
+ items = [
+    { title: 'Profile' },
+    { title: 'Logout' },
+  ];
   ngOnInit() {
     this.httpClient
-      .get<any>('assets/modules/base/tables-thead.json')
+      .get<any>("assets/modules/base/tables-thead.json")
       .subscribe((data) => (this.employeeData = data));
   }
   userMenu: NbMenuItem[] = [
-    { title: "changePass", data: "changePass" },
-    { title: "logout", data: "logout" }
+    { title: "düzenle", data: "changePass" },
+    { title: "sil", data: "logout" },
   ];
 }
