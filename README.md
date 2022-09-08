@@ -1,5 +1,5 @@
-# DKO - Dashboard
- Dashboard UI I made with **Nebula CSS, Bootstrap, Material 
+# <p align="center">  DKO - Dashboard </p>
+ Dashboard UI I made with <b>Nebular CSS, Bootstrap, Material </b>
  
 
 ## Badges
@@ -11,14 +11,13 @@ Use it as you want
 
 **Client:** Angular, TS
 
-**Server:** Fire
+**Server:** 
 
 ## Making
 - Ease of Use.
 - Angular
-- Tailwind CSS
-# Note
-Under firebase{} in environments, enter your firebase information in firebase settings.
+- Nebular - Bootstrap - Material
+ 
 ## Screenshots
 <img src="src/assets/images/ss/1.png">
 <img src="src/assets/images/ss/2.png">
@@ -28,19 +27,16 @@ Under firebase{} in environments, enter your firebase information in firebase se
 
 ## For Support
 For support, send an email to oguzhancart1@gmail.com or you are invited to our telegram channel https://t.me/vsform_tr  
-## Codpen.io
-[Codpen account link](https://codepen.io/oguzhan1881)
-## Github Account Link
-[Github account link](https://github.com/oguzhan18)
-## Mail
-oguzhancart1@gmail.com
-# Instagram Account Link
-<a target="_blank" href="https://www.instagram.com/oguzhan_cart/">
-  <img align="left" alt="Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
-</a>
-<a target="_blank" href="https://twitter.com/OguzhanCart">
-  <img align="left" alt="twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />
-</a>
-<a target="_blank" href="https://github.com/oguzhan18">
-  <img align="left" alt="github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" />
-</a>
+ 
+## Contact Me
+<p align="left">
+<a href="https://codepen.io/oguzhan1881" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="oguzhan1881" height="30" width="40" /></a>
+<a href="https://dev.to/oguzhan18" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="oguzhan18" height="30" width="40" /></a>
+<a href="https://twitter.com/oguzhancart" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="oguzhancart" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/o%c4%9fuzhan-%c3%a7art-b73405199/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="o%c4%9fuzhan-%c3%a7art-b73405199/" height="30" width="40" /></a>
+<a href="https://codesandbox.com/oguzhan18" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codesandbox.svg" alt="oguzhan18" height="30" width="40" /></a>
+<a href="https://instagram.com/oguzhan_cart" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="oguzhan_cart" height="30" width="40" /></a>
+<a href="https://dribbble.com/cart188" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="cart188" height="30" width="40" /></a>
+<a href="https://hashnode.com/@oguzhancart" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hashnode.svg" alt="@oguzhancart" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/oguzhan18/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="oguzhan18/" height="30" width="40" /></a>
+</p>
