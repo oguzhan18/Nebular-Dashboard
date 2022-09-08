@@ -149,9 +149,8 @@
             "widgetTypeKey": "Link",
             "widgetModel": {
               "links": [
-                { "link": "/branch", "linkTitle": "Branch" },
-                { "link": "/branch-list", "linkTitle": "List Branch" },
-                { "link": "http://www.google.com", "linkTitle": "Google" }
+                { "link": "/branch", "linkTitle": "Ekran Ekle" },
+                { "link": "/branch-list", "linkTitle": "Ekran Listesi" }
               ],
               "uniqueId": "10b48ef2-88b2-6a99-eaf8-ed294e2e8af9",
               "title": "Important links",

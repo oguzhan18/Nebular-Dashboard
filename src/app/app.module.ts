@@ -38,11 +38,12 @@ import { MembersAddComponent } from "./pages/members/members-add/members-add.com
 import { ScreenListComponent } from "./pages/screen/screen-list/screen-list.component";
 import { ScreenAddComponent } from "./pages/screen/screen-add/screen-add.component";
 import { FormsModule } from "@angular/forms";
+import { WindownebularComponent } from './pages/members/windownebular/windownebular.component';
 
 const moduleKey = "main";
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, MainViewComponent],
+  declarations: [AppComponent, MainComponent, MainViewComponent, WindownebularComponent],
   imports: [
     FormsModule,
     BrowserModule,
@@ -82,6 +83,9 @@ const moduleKey = "main";
     BrowserAnimationsModule,
     NarikClientStorageModule.forRoot(),
     NarikNgxLayout,
+
+
+    
   ],
   providers: [
     {

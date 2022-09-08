@@ -61,12 +61,12 @@
             "defaultEntity": {}
         }],
         "views": [{
-                "key": "branch",
+                "key": "Ekranlar",
                 "viewType": "Edit",
                 "entity": "branch"
             },
             {
-                "key": "branch-list",
+                "key": "Ekranlar Listesi",
                 "viewType": "List",
                 "entity": "branch"
             }
@@ -80,9 +80,10 @@
             {
                 "title": "dashboard.dashboardForm",
                 "icon": "menu-outline",
-                "children": [{
+                "children": [
+                    {
                         "title": "dashboard.dashboardMembers",
-                        "link": "/dashboard"
+                        "link": "/members-add"
                     },
                     {
                         "title": "dashboard.dashboardDesign",
@@ -95,11 +96,11 @@
                 "icon": "menu-outline",
                 "children": [{
                         "title": "branch_new",
-                        "link": "/branch"
+                        "link": "/screen"
                     },
                     {
                         "title": "list_branch",
-                        "link": "/branch-list"
+                        "link": "/screen-list"
                     }
                 ]
             }

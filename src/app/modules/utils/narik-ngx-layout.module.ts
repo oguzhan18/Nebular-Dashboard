@@ -5,6 +5,8 @@ import { NgModule } from "@angular/core";
 import { COMPONENTS } from "./index";
 
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+ 
+import { NbDialogModule } from '@nebular/theme';
 
 import {
   NbActionsModule,
@@ -20,6 +22,7 @@ import {
   NbToggleModule
 } from "@nebular/theme";
 import { RouterModule } from "@angular/router";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   imports: [
@@ -27,6 +30,7 @@ import { RouterModule } from "@angular/router";
     CommonModule,
     FormsModule,
     NbActionsModule,
+    HttpClientModule,
     NbCardModule,
     NbContextMenuModule,
     NbLayoutModule,
@@ -36,7 +40,11 @@ import { RouterModule } from "@angular/router";
     NbIconModule,
     NbUserModule,
     MatSlideToggleModule,
-    NbToggleModule
+    NbToggleModule,
+
+
+ 
+    NbDialogModule.forRoot({hasBackdrop: true, closeOnBackdropClick: false})
   ],
   declarations: [COMPONENTS],
   exports: [COMPONENTS],
